@@ -97,6 +97,10 @@
 
         42. git rebase <base>
 
+11. git clean ==> to completely delete the untracked files
+
+        43.  git clean -f ==> -f is necessary to execute the command
+
 git clone
 git stash
 git push origin <tagname> --tags
