@@ -15,7 +15,7 @@
         7.  git init
 
 3.  git add ==> to add all or some files to the staging area which are tracked by git
-        8.  git add . ==> to include all the files
+        8.  git add .          ==> to include all the files
         9.  git add <filename> ==> to include a single file
 
     to revert this use
@@ -23,4 +23,19 @@
 
 4.  git commit ==> to save the currently staged files
         11. git commit -m "custom message".
+        12. git commit -am "commit message" ==> adds and commit all the staged changes.
+        13. git commit --amend              ==>  a convenient way to modify the most recent commit. 
+                                                 It lets you combine staged changes with the previous commit instead of creating an entirely new commit. It can also be used to simply edit the previous commit message without changing its snapshot. But, amending does not just alter the most recent commit, it replaces it entirely, meaning the amended commit will be a new entity with its own ref.
+
+                --no-edit ==> flag will allow you to make the amendment to your commit without changing its commit message.
+                -m => let's you pass a new message.
+            """""""warning""""""" => should not apply for main branch or on a branch on which other programmers are rely on.
+
+5.  git log,
+    git status ==> in order to inspect commit history and current working directory
+        14. git status         ==> to check the state of the files in the current working directory
+        15. git log            ==> Display the entire commit history using the default formatting
+        16. git log -n <limit> ==> Limit the number of commits shown
+        17. git log --oneline  ==> to see some basic info about the commit.
+        18. git log --graph --decorate --oneline
 git clone
