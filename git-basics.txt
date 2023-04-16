@@ -123,15 +123,20 @@
 
         49. git fetch <remote> ==> fetches all the branches
         50. git fetch <remote> <branch> ==> Same as the above command, but only fetch the specified branch
+            *** after running this command you will be in a detached head mode, then use
+            git checkout -b local_feature_branch ==> to create a new branch from this 
+            base and continue work on the latest update
         51. git fetch --all ==> fetches all registered remotes and their branches
-        
+
 
         git fetch vs git pull:
 
             When downloading content from a remote repo, git pull and git fetch commands are available to accomplish the task. You can consider git fetch the 'safe' version of the two commands. It will download the remote content but not update your local repo's working state, leaving your current work intact. git pull is the more aggressive alternative; it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. If you have pending changes in progress this will cause conflicts and kick-off the merge conflict resolution flow.
 
+15. git push ==> to upload your work to remote repo
 
+        52. git push -u <remote repo alias> <local branch name> 
+        53. git push <remote> --tags
 git clone
-git push origin <tagname> --tags
 git stash
 
