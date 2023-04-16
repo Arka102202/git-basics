@@ -65,9 +65,12 @@
         31. git push <remote-repo> crazy-experiment ==> pushes the crazy-experiment branch to new-remote-repo
         32. git push <remote-repo> --delete <branch> ==> push a delete signal to the remote origin repository that triggers a delete operation.
 
+8.  git rebase ==>  to maintain a linear project history
+                    it mainly means that you can change the base commit from which a new branch has spawned up
+                    to a new base commit.
+
+        33. git rebase <base>
+
 git clone
 git stash
 git push origin <tagname> --tags
-
-detached Head state:
-    This puts the repo in a detached HEAD state. This means any changes made will not update the tag. They will create a new detached commit. This new detached commit will not be part of any branch and will only be reachable directly by the commits SHA hash. Therefore it is a best practice to create a new branch anytime you're making changes in a detached HEAD state.
