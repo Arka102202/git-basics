@@ -65,12 +65,39 @@
         31. git push <remote-repo> crazy-experiment ==> pushes the crazy-experiment branch to new-remote-repo
         32. git push <remote-repo> --delete <branch> ==> push a delete signal to the remote origin repository that triggers a delete operation.
 
-8.  git rebase ==>  to maintain a linear project history
+8.  git checkout ==> used to switch between different branches
+
+        33. git checkout ＜new-branch＞ => switches from one branch to another
+        34. git checkout -b ＜new-branch＞ ==> creates and checks out ＜new-branch＞
+        35. git checkout -b ＜new-branch＞ ＜existing-branch＞ ==> ＜existing-branch＞ is passed which then bases new-branch off
+                                                                   of existing-branch instead of the current HEAD 
+        36. git checkout <commit hash> ==>  This makes your working directory match the exact state of the <commit hash> commit.
+            """"note"""" => here now whatever you do nothing will reflect to your main code base as you are in a """"detached head state"""",
+                            so, start a new branch from here using
+                            #### git switch -c <new-branch-name>
+            detached Head state:
+                This puts the repo in a detached HEAD state. This means any changes made will not update the tag. They will create a new detached commit. This new detached commit will not be part of any branch and will only be reachable directly by the commits SHA hash. Therefore it is a best practice to create a new branch anytime you're making changes in a detached HEAD state.
+
+        37. git checkout - ==> to go back to master from any branch
+    working with remote repository
+        38. git fetch --all """to use""" git checkout ＜remotebranch＞
+        39. git checkout -b ＜remotebranch＞ origin/＜remotebranch＞
+
+9.  git merge ==>   is used to combine two branches
+                    it is important that before merging with any branch, you need to be at the head of that branch with which
+                    you want to merge. 
+
+        40. git merge ＜new-branch＞
+        41. git merge --no-ff <branch> ==>  merges the specified branch into the current branch, but always generates a merge
+                                            commit (even if it was a fast-forward merge). This is useful for documenting all merges that occur in your repository.
+
+10. git rebase ==>  to maintain a linear project history
                     it mainly means that you can change the base commit from which a new branch has spawned up
                     to a new base commit.
 
-        33. git rebase <base>
+        42. git rebase <base>
 
 git clone
 git stash
 git push origin <tagname> --tags
+
