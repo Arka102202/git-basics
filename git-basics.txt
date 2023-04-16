@@ -38,4 +38,21 @@
         16. git log -n <limit> ==> Limit the number of commits shown
         17. git log --oneline  ==> to see some basic info about the commit.
         18. git log --graph --decorate --oneline
+        19. git log --pretty=oneline
+
+6.  git tag ==> when you have reached a significant stage of your development and you want to commit this point with a special
+                name then use tags.
+
+        20. git tag <tagname>                        ==> tagname generally some version number and like that, creates a lightweight tag.
+        21. git tag -a <tagname> -m "custom message" ==> to create an annotated tag, best for public use
+        22. git tag                                  ==> list out all the tags.
+        23. git tag -l *some common word or wild card expression* 
+        24. git tag -a <tagname> <old commit hash>   ==>  to create a tag from old commit
+        25. git checkout <tagname>                   ==> goes into a detached head mode.
+        24. git tag -d <tagname>                     ==> to delete a tag
+
 git clone
+git push origin <tagname> --tags
+
+detached Head state:
+    This puts the repo in a detached HEAD state. This means any changes made will not update the tag. They will create a new detached commit. This new detached commit will not be part of any branch and will only be reachable directly by the commits SHA hash. Therefore it is a best practice to create a new branch anytime you're making changes in a detached HEAD state.
