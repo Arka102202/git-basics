@@ -61,6 +61,7 @@
         28. git branch -D <branch> ==> deletes a branch with unmerged commits
         29. git branch -m <branch> ==> rename the current branch
     working with remote repo:
+    ****    git branch -r ==> to see all the remote repo's branch
         30. git branch -a ==> list out all the remote branches.
         31. git push <remote-repo> crazy-experiment ==> pushes the crazy-experiment branch to new-remote-repo
         32. git push <remote-repo> --delete <branch> ==> push a delete signal to the remote origin repository that triggers a delete operation.
@@ -110,7 +111,27 @@
 
             Second, git revert is able to target an individual commit at an arbitrary point in the history, whereas git reset can only work backward from the current commit. For example, if you wanted to undo an old commit with git reset, you would have to remove all of the commits that occurred after the target commit, remove it, then re-commit all of the subsequent commits. Needless to say, this is not an elegant undo solution.
 
+13. git remote ==> for communicating with remote repositories
+
+        45. git remote ==> to list out all remote connections that you have with other repo
+        46. git remote -v ==> same as the above but it also includes all the respective urls
+        46. git remote add <name> <URL> ==> to add a new connection
+        47. git remote rm <name> ==> to remove a connection
+        48. git remote rename <old-name> <new-name> ==> to rename an existing connection
+
+14. git fetch ==> a safe option to explore what others in your team has been doing without effecting your own local repo
+
+        49. git fetch <remote> ==> fetches all the branches
+        50. git fetch <remote> <branch> ==> Same as the above command, but only fetch the specified branch
+        51. git fetch --all ==> fetches all registered remotes and their branches
+        
+
+        git fetch vs git pull:
+
+            When downloading content from a remote repo, git pull and git fetch commands are available to accomplish the task. You can consider git fetch the 'safe' version of the two commands. It will download the remote content but not update your local repo's working state, leaving your current work intact. git pull is the more aggressive alternative; it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. If you have pending changes in progress this will cause conflicts and kick-off the merge conflict resolution flow.
+
+
 git clone
-git stash
 git push origin <tagname> --tags
+git stash
 
