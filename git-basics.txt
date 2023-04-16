@@ -51,7 +51,22 @@
         25. git checkout <tagname>                   ==> goes into a detached head mode.
         24. git tag -d <tagname>                     ==> to delete a tag
 
+7.  git branch ==>  A branch represents an independent line of development.
+                    Git branches are ""effectively a pointer to a snapshot"" of your changes. When you want to add a new feature or fix a bug—no matter how big
+                    or how small—you spawn a new branch to encapsulate your changes. This makes it harder for unstable code to get merged into the main code base, and it gives you the chance to clean up your future's history before merging it into the main branch.
+
+        25. git branch ==> list out all the branches
+        26. git branch <branch> ==> creates a branch
+        27. git branch -d <branch> ==> deletes a branch
+        28. git branch -D <branch> ==> deletes a branch with unmerged commits
+        29. git branch -m <branch> ==> rename the current branch
+    working with remote repo:
+        30. git branch -a ==> list out all the remote branches.
+        31. git push <remote-repo> crazy-experiment ==> pushes the crazy-experiment branch to new-remote-repo
+        32. git push <remote-repo> --delete <branch> ==> push a delete signal to the remote origin repository that triggers a delete operation.
+
 git clone
+git stash
 git push origin <tagname> --tags
 
 detached Head state:
