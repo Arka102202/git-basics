@@ -73,8 +73,8 @@
                                                                    of existing-branch instead of the current HEAD 
         36. git checkout <commit hash> ==>  This makes your working directory match the exact state of the <commit hash> commit.
             """"note"""" => here now whatever you do nothing will reflect to your main code base as you are in a """"detached head state"""",
-                            so, start a new branch from here using
-                            #### git switch -c <new-branch-name>
+    so, start a new branch from here using
+        ### git switch -c <new-branch-name>
             detached Head state:
                 This puts the repo in a detached HEAD state. This means any changes made will not update the tag. They will create a new detached commit. This new detached commit will not be part of any branch and will only be reachable directly by the commits SHA hash. Therefore it is a best practice to create a new branch anytime you're making changes in a detached HEAD state.
 
