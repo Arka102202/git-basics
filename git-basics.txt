@@ -1,23 +1,26 @@
 1.  git config ==> to set the configuration of the git repo 
-    1.  git config --global user.name <Username>
-    2.  git config --global user.email <email>
+        1.  git config --global user.name <Username>
+        2.  git config --global user.email <email>
 
     if username and email is not set then use this
-    3.  git config --global --add safe.directory D:/programming/git-repo
+        3.  git config --global --add safe.directory D:/programming/git-repo
 
     to use vs code as git editor use 
-    4.  git config --global core.editor "code --wait"
+        4.  git config --global core.editor "code --wait"
 
     to change global config use
-    6.  git config --global -e
+        6.  git config --global -e
 
 2.  git init ==> to initialized a git repo ==> 
-    7.  git init
+        7.  git init
 
-3. git add ==> to add all or some files to the staging area which are tracked by git
-    8.  git add . ==> to include all the files
-    9.  git add <filename> ==> to include a single file
+3.  git add ==> to add all or some files to the staging area which are tracked by git
+        8.  git add . ==> to include all the files
+        9.  git add <filename> ==> to include a single file
 
     to revert this use
-    10. git rm --cached <filename> || git reset
+        10. git rm --cached <filename> || git reset
+
+4.  git commit ==> to save the currently staged files
+        11. git commit -m "custom message".
 git clone
